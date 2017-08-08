@@ -12,13 +12,18 @@ function index(req, res) {
 
 // POST action
 function create(req, res, next) {
+	console.log(req.body);
 	var question = new Question(req.body)
 
 	question.save(function(err, question) {
 	    // return 500 if there's an error:
-	    if(err) res.status(500).send(err)
+	    if(err) {
+				console.log(err);
 	    // otherwise send question json back with 201 create success header:
-	    res.status(201).send(question).send({message: "Question asked"})
+			}else {
+				console.log(question)
+		    res.status(201).send(question)
+			}
 	})
 }
 
@@ -35,7 +40,7 @@ function show(req, res) {
 // UPDATE action
 function update(req, res) {
   Question.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, question) => {
-    if(err) return handleError(res)
+    if(err) return (err)
     res.json({success: true, message: "Question updated.", question})
   })
 }

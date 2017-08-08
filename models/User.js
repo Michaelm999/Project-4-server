@@ -6,13 +6,13 @@ const
     email: String,
     password: {type: String, select: false},
     bio: String
-
   })
 
 // Encrypting the password:
 userSchema.methods.generateHash = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8))
 }
+
 // compares a provided password to the encrypted password.
 userSchema.methods.validPassword = function(password) {
   if(!password) return false
