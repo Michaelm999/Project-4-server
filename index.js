@@ -12,8 +12,7 @@ const
   jwt = require('jsonwebtoken'),
   cors = require('cors'),
   User = require('./models/User.js'),
-  questionRoutes = require('./routes/questions'),
-  answerRoutes = require('./routes/answers')
+  questionRoutes = require('./routes/questions')
 
 mongoose.connect(mongoUrl, (err) => {
   console.log(err || "Connected to MongoDB.")
@@ -86,7 +85,6 @@ app.get('/protected', (req, res) => {
 })
 
 app.use('/api/questions', questionRoutes)
-app.use('/api/questions/:id/answers', answerRoutes)
 
 // client must include a token in their request(s) to see the rest of the app
 function verifyToken(req, res, next) {

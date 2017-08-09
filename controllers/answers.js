@@ -1,21 +1,23 @@
-const Answer = require('../models/Answers.js')
+const Question = require('../models/Questions.js')
 
-function create(req, res, next) {
+function create(req, res) {
 	console.log("MICHAELLLLLL");
-		console.log(req.body);
-		var answer = new Answer(req.body)
+	console.log(req.body);
+	console.log(req.params)
+  Question.findById(req.params.id, (err, question) => {
+		console.log(question)
+    if (err) return err;
 
-		answer.save(function(err, answer) {
-		    // return 500 if there's an error:
-		    if(err) {
-					console.log(err);
-		    // otherwise send answer json back with 201 create success header:
-				}else {
-					console.log(answer)
-			    res.status(201).send(answer)
-				}
-		})
-	}
+    console.log(question);
+    var newAn = Object.assign({}, req.body, {answerer: req.user._id})
+		question.answers.push(newAn)
+    console.log(newAn);
+    console.log("++++++++++++++++++++++");
+    question.save((err, question) => {
+      res.json({success: true, message: "question answered"})
+    })
+  })
+}
 
 module.exports = {
 	create: create
