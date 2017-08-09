@@ -4,8 +4,8 @@ const answerSchema = new mongoose.Schema({
   text: {
       type: String
     },
-    answerer: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
-  _questionId: {
+    answerer: {type: mongoose.Schema.Types.Object, ref: "User"},
+    _questionId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Questions'
   }

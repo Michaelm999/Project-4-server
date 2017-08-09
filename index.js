@@ -13,7 +13,7 @@ const
   cors = require('cors'),
   User = require('./models/User.js'),
   questionRoutes = require('./routes/questions'),
-
+  answerRoutes = require('./routes/answers')
 
 mongoose.connect(mongoUrl, (err) => {
   console.log(err || "Connected to MongoDB.")
@@ -66,7 +66,7 @@ app.post('/api/authenticate', (req, res) => {
       return res.json({success: false, message: "Incorrect email or password."})
     }
     // otherwise, use mongoose document's toObject() method to get a stripped down version of
-    // just the user's data (name, email etc) as a simple object:
+    // the user's data as a simple object:
     const userData = user.toObject()
     // remove the password from this object before creating the token:
     delete userData.password
@@ -86,6 +86,7 @@ app.get('/protected', (req, res) => {
 })
 
 app.use('/api/questions', questionRoutes)
+app.use('/api/questions/:id/answers', answerRoutes)
 
 // client must include a token in their request(s) to see the rest of the app
 function verifyToken(req, res, next) {
@@ -93,10 +94,10 @@ function verifyToken(req, res, next) {
   if(token) {
     // verify the token's authenticity:
     jwt.verify(token, process.env.SECRET, (err, decoded) => {
-      // if that doesn't work...
+      // what happens if that doesn't work...
       if(err) return res.json({success: false, message: "Token not confirmed."})
       req.user = decoded
-      // otherwise you go on
+      // otherwise you go on to the next step
       next()
     })
   } else { // if token is NOT provided in the request headers:
