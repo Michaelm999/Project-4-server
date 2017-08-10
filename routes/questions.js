@@ -3,7 +3,7 @@ const
   questionRouter = new express.Router()
   questions = require('../controllers/questions.js'),
   answerRoutes = require('./answers')
-
+//question routes-expand off of the baseURL that is established
   questionRouter.route('/')
     .get(questions.index)
     .post(questions.create)

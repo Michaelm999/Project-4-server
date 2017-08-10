@@ -7,7 +7,7 @@ const
   passport = require('passport'),
   bodyParser = require('body-parser'),
   cookieParser = require('cookie-parser'),
-  mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/questionthis'
+  mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/jwt',
   port = 3001,
   jwt = require('jsonwebtoken'),
   cors = require('cors'),
