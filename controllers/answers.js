@@ -14,7 +14,7 @@ function create(req, res) {
     console.log(newAn);
     console.log("++++++++++++++++++++++");
     question.save((err, question) => {
-      res.json({success: true, message: "question answered"})
+      res.json({success: true, message: "question answered", question:question})
     })
   })
 }

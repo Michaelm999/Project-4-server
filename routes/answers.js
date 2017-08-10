@@ -1,6 +1,7 @@
 const
   express = require('express'),
-  //makes answerRoutes be a part of the question routes
+  //nesting this route by attaching them as middleware on an other router, with or without params
+  //this way, it can access the params from the parent router.
   answerRouter = new express.Router({mergeParams: true}),
   answerCtrl = require('../controllers/answers.js')
 

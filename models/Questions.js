@@ -9,13 +9,8 @@ const questionSchema = new mongoose.Schema({
     title: String,
     text: String,
     asker: {type: mongoose.Schema.Types.Object, ref: "User"},
+    //bring answerSchema for the answer section
     answers: [answerSchema]
-    // answers: [
-    //     {
-    //       type: mongoose.Schema.Types.ObjectId,
-    //       ref: "Answers"
-    //     }
-    // ]
 }, {timestamps: true});
 
 questionSchema.pre("findOne", function() {
