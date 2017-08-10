@@ -9,7 +9,7 @@ function create(req, res) {
     if (err) return err;
 
     console.log(question);
-    var newAn = Object.assign({}, req.body, {answerer: req.user._id})
+    var newAn = Object.assign({}, req.body, {answerer: req.user.name})
 		question.answers.push(newAn)
     console.log(newAn);
     console.log("++++++++++++++++++++++");
