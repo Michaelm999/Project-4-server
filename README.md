@@ -65,7 +65,7 @@ Many of these features pertain to the user's page. While i can show some user in
 ![wireframe](images/SignUp-wireframe.JPG)
 
 ## User Page
-![wireframe](images/UserPage.JPG)
+![wireframe](images/User-wireframe.JPG)
 
 ## Questions
 ![wireframe](images/QuestionPage-wireframe.JPG)
