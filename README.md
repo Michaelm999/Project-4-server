@@ -53,10 +53,25 @@ Many of these features pertain to the user's page. While i can show some user in
 
 --
 
-# ERD
+# WireFrames
 
-![erd]
+## Welcome Page
+![wireframe](images/WelcomePage-wireframe.JPG)
 
+## Login
+![wireframe](images/Login-wireframe.JPG)
+
+## SignUp
+![wireframe](images/SignUp-wireframe.JPG)
+
+## User Page
+![wireframe](images/UserPage.JPG)
+
+## Questions
+![wireframe](images/QuestionPage-wireframe.JPG)
+
+## Answer Section
+![wireframe](images/AnswerSection-wireframe.JPG)
 
 --
 # Installation Instructions
