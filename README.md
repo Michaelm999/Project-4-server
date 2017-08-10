@@ -21,7 +21,8 @@ For a more detailed view of the work, here is my [Trello](https://trello.com/b/o
 
 --
 # Unsolved Problems
-The biggest hurdles we had to overcome were importing new technology onto the app. In particular, adding the ability to login to Facebook proved to be difficult, and took a considerable amount of time to get working flawlessly. In addition, we had some struggles with editing, updating and deleting comments that took some time to overcome.
+There are a number of additional features that I was unable to bring into the project as of yet.
+Many of these features pertain to the user's page. While i can show some user information, I plan to show to have a list of questions the user have asked. I also plan to have the ability for user's to edit thier personal information.
 
 --
 
@@ -29,19 +30,27 @@ The biggest hurdles we had to overcome were importing new technology onto the ap
 
 ## Opening Page
 
-![wireframe]
+![screenshot](images/ScreenShot-FrontPage.png)
 
 ## Login Page
 
-![wireframe]
+![screenshot](images/ScreenShot-LogIn.png)
 
 ## Sign In Page
 
-![wireframe]
+![screenshot](images/ScreenShot-SignUp.png)
+
+## User Page
+
+![screenshot](images/ScreenShot-UserPage.png)
 
 ## Question Page
 
-![wireframe]
+![screenshot](images/ScreenShot-Questions.png)
+
+## Answer Section
+![screenshot](images/ScreenShot-AnswerSection.png)
+
 --
 
 # ERD
@@ -54,7 +63,7 @@ The biggest hurdles we had to overcome were importing new technology onto the ap
 
 To install this app you must run:
 
-git clone
+git clone on both client and server repos
 
 npm install
 
