@@ -8,7 +8,7 @@ const
   bodyParser = require('body-parser'),
   cookieParser = require('cookie-parser'),
   mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/jwt',
-  port = 3001,
+  port = (process.env.PORT || 5000),
   jwt = require('jsonwebtoken'),
   cors = require('cors'),
   User = require('./models/User.js'),
