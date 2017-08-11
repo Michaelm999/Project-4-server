@@ -1,6 +1,7 @@
 # QuestionThis
 
-QuestionThis is the latest question and answer application. On this application, people are able to post questions, edit questions, delete questions, and most importantly, answer questions.
+QuestionThis is the latest question and answer application on the web. On this application, people are able to post questions, edit questions, delete questions, and most importantly, answer questions.
+
 There is no judgment here: only users in the pursuit of knowledge.
 
 Here is the link to client [end](https://still-dusk-48161.herokuapp.com/),
@@ -16,7 +17,9 @@ This app was made out of HTML, React.js, Express, MongoDB, Node.js and CSS.
 
 # General Approach
 
-My approach was to start with the user login and build out from there. I used a json web token for authentication as well. After that, I built up the Questions model, controller and routes. After that, I created a Questions page, that had a list of all the questions present. I also included the ability to delete questions with a button next to each queston. Then, I created a form that renders when a user clicks on a question. This form displays the details of the questions, the name of the user who asked the question, and a form for other users to post their own answers to the questions, which also appear in the form. Finally, I included a button in the form I had just created, which changes the field rendered to a space that allows the title and the text of the question to be edited and updated.
+My approach was to start with the user login and build out from there. I used a json web token for authentication as well. After that, I built up the Questions model, controller and routes. After that, I created a Questions page, that had a list of all the questions present. I also included the ability to delete questions with a button next to each question. Then, I created a form that renders when a user clicks on a question. This form displays the details of the questions, the name of the user who asked the question, and a form for other users to post their own answers to the questions, which also appear in the form. Finally, I included a button in the form I had just created, which changes the field rendered to a space that allows the title and the text of the question to be edited and updated.
+
+The answer model was made as a child of the question model, allowing it to access the params of the Question model. This made it easier to operate on the backend.
 
 For a more detailed view of my work, as well as my user stories, you can find it here on my  [Trello Board](https://trello.com/b/cIKqkmI2/project-4).
 

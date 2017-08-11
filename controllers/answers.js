@@ -1,7 +1,6 @@
 const Question = require('../models/Questions.js')
 
 function create(req, res) {
-	console.log("MICHAELLLLLL");
 	console.log(req.body);
 	console.log(req.params)
   Question.findById(req.params.id, (err, question) => {
