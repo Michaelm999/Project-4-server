@@ -10,7 +10,7 @@ and here is a link to the server [end](https://serene-chamber-30424.herokuapp.co
 
 # Technologies Used
 
-This app was made out of HTML, React.js, Express, and CSS.
+This app was made out of HTML, React.js, Express, MongoDB, Node.js and CSS.
 
 --
 
