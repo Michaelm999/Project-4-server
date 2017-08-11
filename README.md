@@ -3,7 +3,7 @@
 QuestionThis is the latest question and answer application. On this application, people are able to post questions, edit questions, delete questions, and most importantly, answer questions.
 There is no judgment here: only users in the pursuit of knowledge.
 
-Here is the link to our [app]
+Here is the link to our [app](https://still-dusk-48161.herokuapp.com/questions)
 
 --
 
@@ -15,7 +15,7 @@ This app was made out of HTML, React.js, Express, and CSS.
 
 # General Approach
 
-My approach was to start with the user login and build out from there. I used a json web token for authentication as well. After that, I built up the Questions model, controller and routes. With these elements set up, It became possible for users to post questions, delete questions, view details on individual questions, like who posted it and what exactly the question is about, and finally to edit the content of questions. And finally, I built in a way for individuals to give answers to individual questions.
+My approach was to start with the user login and build out from there. I used a json web token for authentication as well. After that, I built up the Questions model, controller and routes. After that, I created a Questions page, that had a list of all the questions present. I also included the ability to delete questions with a button next to each queston. Then, I created a form that renders when a user clicks on a question. This form displays the details of the questions, the name of the user who asked the question, and a form for other users to post their own answers to the questions, which also appear in the form. Finally, I included a button in the form I had just created, which changes the field rendered to a space that allows the title and the text of the question to be edited and updated.
 
 For a more detailed view of the work, here is my [Trello](https://trello.com/b/oqc04sL4/project-4) Board.
 
