@@ -38,7 +38,7 @@ app.route('/api/users')
       res.json({success: true, message: "User created.", user})
     })
   })
-//get individual user
+  
 app.route('/api/users/:id')
   .get((req, res) => {
     User.findById(req.params.id, (err, user) => {

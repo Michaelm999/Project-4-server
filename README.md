@@ -4,7 +4,7 @@ QuestionThis is the latest question and answer application. On this application,
 There is no judgment here: only users in the pursuit of knowledge.
 
 Here is the link to client [end](https://still-dusk-48161.herokuapp.com/),
-and her is a link to the server [end](https://serene-chamber-30424.herokuapp.com/)
+and here is a link to the server [end](https://serene-chamber-30424.herokuapp.com/)
 
 --
 
