@@ -3,7 +3,8 @@
 QuestionThis is the latest question and answer application. On this application, people are able to post questions, edit questions, delete questions, and most importantly, answer questions.
 There is no judgment here: only users in the pursuit of knowledge.
 
-Here is the link to our [app](https://still-dusk-48161.herokuapp.com/questions)
+Here is the link to client [end](https://still-dusk-48161.herokuapp.com/),
+and her is a link to the server [end](https://serene-chamber-30424.herokuapp.com/)
 
 --
 
@@ -17,7 +18,7 @@ This app was made out of HTML, React.js, Express, and CSS.
 
 My approach was to start with the user login and build out from there. I used a json web token for authentication as well. After that, I built up the Questions model, controller and routes. After that, I created a Questions page, that had a list of all the questions present. I also included the ability to delete questions with a button next to each queston. Then, I created a form that renders when a user clicks on a question. This form displays the details of the questions, the name of the user who asked the question, and a form for other users to post their own answers to the questions, which also appear in the form. Finally, I included a button in the form I had just created, which changes the field rendered to a space that allows the title and the text of the question to be edited and updated.
 
-For a more detailed view of the work, here is my [Trello](https://trello.com/b/oqc04sL4/project-4) Board.
+For a more detailed view of the work, here is my [Trello](https://trello.com/b/cIKqkmI2/project-4) Board.
 
 --
 # Unsolved Problems
@@ -76,14 +77,18 @@ Many of these features pertain to the user's page. While i can show some user in
 --
 # Installation Instructions
 
-To install this app you must run:
+To install this app you must run on the terminal:
 
-git clone on both client and server repos
+Run git clone on the client repo [here](https://github.com/Michaelm999/Project-4-client)
 
-npm install
+Run git clone on the server repo [here](https://github.com/Michaelm999/Project-4-server)
 
-mongod (on another window of the terminal)
+Run npm install on both repos you have cloned
 
-nodemon
+Go to the server repo on another window in the terminal, and then run mongod
 
-And then visit localhost 3000
+Then run nodemon again on the server
+
+Then open another window in the terminal and go to the client repo.
+
+Run npm start. The app should run locally.
