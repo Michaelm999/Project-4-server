@@ -38,14 +38,24 @@ app.route('/api/users')
       res.json({success: true, message: "User created.", user})
     })
   })
-  
+
 app.route('/api/users/:id')
   .get((req, res) => {
     User.findById(req.params.id, (err, user) => {
       res.json(user)
     })
   })
-
+  .patch((req, res) => {
+        User.findById(req.params.id, (err, user) => {
+        // Update manually here by merging the request body into the user we found by ID.
+        Object.assign(user, req.body)
+        // saving here triggers the bcrypt, so that any save gets hashed before
+        // saving to the database
+        user.save((err, updatedUser) => {
+        res.json({success: true, message: "User updated.", user: updatedUser})
+      })
+     })
+  })
 // the Log In route:
 app.post('/api/authenticate', (req, res) => {
   User.findOne({email: req.body.email}, '+password', (err, user) => {
