@@ -9,7 +9,7 @@ const questionSchema = new mongoose.Schema({
     title: String,
     text: String,
     asker: {type: mongoose.Schema.Types.Object, ref: "User"},
-    //bring answerSchema for the answer section
+    //bring in the answerSchema for the answer section
     answers: [answerSchema]
 }, {timestamps: true});
 

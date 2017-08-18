@@ -4,7 +4,7 @@ QuestionThis is the latest question and answer application on the web. On this a
 
 There is no judgment here: only users in the pursuit of knowledge.
 
-Here is the link to client [end](https://still-dusk-48161.herokuapp.com/),
+Here is the link to client [end](https://question-this.herokuapp.com/),
 and here is a link to the server [end](https://serene-chamber-30424.herokuapp.com/)
 
 --
@@ -24,9 +24,9 @@ The answer model was made as a child of the question model, allowing it to acces
 For a more detailed view of my work, as well as my user stories, you can find it here on my  [Trello Board](https://trello.com/b/cIKqkmI2/project-4).
 
 --
-# Unsolved Problems/Future Features
-There are a number of additional features that I was unable to bring into the project as of yet.
-Many of these features pertain to the user's page. While i can show some user information, I plan to show to have a list of questions the user have asked. I also plan to have the ability for user's to edit their personal information.
+# Future Features
+There are a few additional features that I am unable to bring into the project as of yet.
+One major feature I wish to add pertains to the user's page. While I can show some user information,, and can edit the user's information, I would like to have the user page show a list of questions the user has asked, for reference purposes.
 
 --
 
