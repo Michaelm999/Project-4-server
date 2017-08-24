@@ -8,6 +8,8 @@ const
     .get(questions.index)
     .post(questions.create)
 
+questionRouter.get('/user-questions', questions.userQuestions)
+  
   questionRouter.route('/:id')
     .get(questions.show)
     .patch(questions.update)

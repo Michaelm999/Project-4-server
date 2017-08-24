@@ -10,6 +10,15 @@ function index(req, res) {
 	})
 }
 
+function userQuestions(req, res) {
+	Question.find({asker: req.user._id}, function(err, questions){
+    	// return 404 if there's an error:
+    	if(err) res.status(404).send(err)
+    	// otherwise send json back with 200 success header:
+    	res.status(200).send(questions)
+	})
+}
+
 // POST action
 function create(req, res, next) {
 	console.log(req.body);
@@ -60,5 +69,6 @@ module.exports = {
 	create: create,
 	show: show,
 	update: update,
-	destroy: destroy
+	destroy: destroy,
+	userQuestions: userQuestions
 }
